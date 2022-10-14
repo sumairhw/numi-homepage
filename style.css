@@ -864,13 +864,6 @@ footer p.p--black {
   animation: 3600ms ease-in 0s 1 slideInFromBottom;
 }
 
-#section-2,
-#section-1 {
-  background-size: 4000px 400px;
-  background: linear-gradient(-45deg, rgb(127, 203, 233), rgb(219, 121, 183));
-  animation: animate-gradient 25s ease infinite;
-}
-
 @keyframes animate-gradient {
   0% {
     background-position: left;
