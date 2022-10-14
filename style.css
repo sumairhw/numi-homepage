@@ -120,6 +120,10 @@ footer {
   height: auto;
 }
 
+.section-img {
+  position: relative;
+}
+
 /*********************** Header ***************************/
 header {
   z-index: 1000;
@@ -156,13 +160,13 @@ nav ul {
 }
 
 #section-1 img.float-1 {
-  left: 140px;
-  top: 68px;
+  right: 130px;
+  top: -50px;
 }
 
 #section-1 img.float-2 {
-  top: 142px;
-  left: 40px;
+  top: 35px;
+  left: 25px;
 }
 
 .buttons {
@@ -178,12 +182,12 @@ nav ul {
 }
 
 #section-2 .float-1 {
-  top: 450px;
-  left: 45px;
+  top: 270px;
+  left: 0px;
 }
 #section-2 .float-2 {
-  top: 360px;
-  left: 285px;
+  top: 230px;
+  right: 20px;
 }
 
 /******************section -3*************************** */
@@ -485,7 +489,156 @@ footer p.p--black {
 }
 /*************** media queries ********************/
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
+  .testsection-wrapper,
+  .section-wrapper,
+  .header-wrapper,
+  #footer-wrapper {
+    min-width: 80%;
+    margin: 0 auto;
+  }
+
+  .buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  #section-1 .buttons button:nth-child(1) {
+    width: 110px;
+  }
+
+  #section-1 .main-img {
+    height: 450px;
+  }
+
+  #section-1 .buttons button:nth-child(2) {
+    width: 150px;
+  }
+
+  #section-2 .section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  #section-2 .section-content div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #section-3 .section-wrapper {
+    flex-direction: column;
+  }
+
+  #section-3 .features {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  #section-3 .features > * {
+    flex-basis: 0px;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  #section-3 .feature {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #section-3 .feature p {
+    text-align: center;
+  }
+
+  #section-4 button {
+    align-self: flex-start;
+  }
+
+  #section-4 .btn {
+    width: 140px;
+    margin-left: 0px;
+  }
+
+  #section-4 .section-wrapper div:nth-child(2) {
+    align-self: flex-start;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #section-6 .buttons button:nth-child(1) {
+    width: 110px;
+  }
+  #section-6 .buttons button:nth-child(2) {
+    width: 150px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 990px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  li {
+    font-size: 1.25rem;
+  }
+
+  .p--small {
+    font-size: 1rem;
+  }
+
+  footer .p--black {
+    font-size: 1.1rem;
+  }
+
+  #footer-wrapper .footer-main {
+    align-self: flex-start;
+  }
+
+  #section-1 .main-img {
+    margin-top: 3rem;
+    width: 575px;
+  }
+
+  .float-img {
+    width: 125px;
+    height: auto;
+  }
+
+  #section-1 img.float-1 {
+    right: 230px;
+    top: 2px;
+  }
+
+  #section-1 img.float-2 {
+    top: 120px;
+    left: 0px;
+  }
+
+  #section-2 .float-1 {
+    top: 320px;
+    left: -50px;
+  }
+  #section-2 .float-2 {
+    top: 320px;
+    right: -20px;
+  }
+}
+
+@media screen and (min-width: 991px) {
   h1 {
     font-size: 4rem;
   }
@@ -497,7 +650,7 @@ footer p.p--black {
   .testsection-wrapper,
   .section-wrapper,
   .header-wrapper {
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
   }
 
@@ -531,104 +684,16 @@ footer p.p--black {
   }
 
   #section-1 .main-img {
-    position: relative;
-  }
-
-  .buttons {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
-  #section-1 .buttons button:nth-child(1) {
-    width: 110px;
-  }
-
-  #section-1 .main-img {
     height: 450px;
-  }
-
-  #section-1 .buttons button:nth-child(2) {
-    width: 150px;
-  }
-
-  #section-1 .float-1 {
-    width: 125px;
-    height: auto;
-    right: 10px;
-  }
-
-  #section-1 .float-2 {
-    width: 125px;
-    bottom: 100px;
-    left: 10px;
-    height: auto;
-  }
-
-  #section-2 .section-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  #section-2 .section-content div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  #section-2 .main-img {
-    position: relative;
   }
 
   #section-2 .main-img {
     height: 650px;
   }
 
-  #section-2 .float-1 {
-    width: 125px;
-    height: auto;
-    top: 350px;
-    left: 80px;
-  }
-
-  #section-2 .float-2 {
-    width: 125px;
-    height: auto;
-    top: 350px;
-    left: 440px;
-  }
-
-  #section-3 h2 {
-    text-align: center;
-  }
-
   #section-3 .section-wrapper {
     flex-direction: column;
   }
-
-  #section-3 .features {
-    flex-direction: row;
-    gap: 2rem;
-    padding: 2rem;
-  }
-  #section-3 .features > * {
-    flex-basis: 0px;
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
-
-  #section-3 .feature {
-    justify-content: center;
-    align-items: center;
-  }
-
-  #section-3 .feature p {
-    text-align: center;
-  }
-
   #section-4 .section-img {
     order: 1;
   }
@@ -637,28 +702,8 @@ footer p.p--black {
     height: 650px;
   }
 
-  #section-4 button {
-    align-self: flex-start;
-  }
-
-  #section-4 .btn {
-    width: 140px;
-    margin-left: 0px;
-  }
-
-  .testimonial-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
   #section-6 h2 {
     font-size: 2.5rem;
-  }
-
-  #section-6 .buttons button:nth-child(1) {
-    width: 110px;
-  }
-  #section-6 .buttons button:nth-child(2) {
-    width: 150px;
   }
 
   #section-6 .section-content {
@@ -694,12 +739,6 @@ footer p.p--black {
   .footer-logos {
     justify-content: center;
     gap: 3rem;
-  }
-
-  .float-img {
-    position: absolute;
-    width: 125;
-    height: auto;
   }
 
   header .mobile-menu {
@@ -746,5 +785,58 @@ footer p.p--black {
 
   header li:hover {
     color: rgba(0, 0, 0, 0.9);
+  }
+
+  .float-img {
+    width: 150px;
+    height: auto;
+  }
+
+  #section-1 img.float-1 {
+    right: 290px;
+    top: -100px;
+  }
+
+  #section-1 img.float-2 {
+    top: 20px;
+    left: 50px;
+  }
+
+  #section-2 .float-1 {
+    top: 320px;
+    left: 50px;
+  }
+  #section-2 .float-2 {
+    top: 320px;
+    right: 80px;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  html {
+    font-size: 2rem;
+  }
+
+  .main-img {
+    scale: 1.5;
+  }
+
+  .testsection-wrapper,
+  .section-wrapper,
+  .header-wrapper,
+  #footer-wrapper {
+    min-width: 70%;
+    margin: 0 auto;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .header-wrapper {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
