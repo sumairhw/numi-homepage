@@ -174,7 +174,6 @@ nav ul {
   flex-direction: column;
   gap: 1rem;
 }
-
 /************************ section 2 *********************/
 #section-2 {
   padding-top: 8rem;
@@ -388,6 +387,10 @@ nav ul {
 
 .chat-widget i:hover {
   cursor: pointer;
+}
+
+.chat-widget i:hover::before {
+  content: "\f00d";
 }
 
 /* ************************** footer ***************************/
@@ -839,4 +842,73 @@ footer p.p--black {
   .testimonial-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+/* animation stuff */
+#section-1 h1 {
+  animation: 1s ease-in 0s 1 slideInFromBottom;
+}
+#section-1 .p--hero {
+  animation: 1500ms ease-in 0s 1 slideInFromBottom;
+}
+#section-1 .buttons {
+  animation: 2s ease-in 0s 1 slideInFromBottom;
+}
+#section-1 .main-img {
+  animation: 3s ease-in 0s 1 slideInFromBottom;
+}
+#section-1 .float-1 {
+  animation: 3500ms ease-in 0s 1 slideInFromBottom;
+}
+#section-1 .float-2 {
+  animation: 3600ms ease-in 0s 1 slideInFromBottom;
+}
+
+#section-2,
+#section-1 {
+  background-size: 4000px 400px;
+  background: linear-gradient(-45deg, rgb(127, 203, 233), rgb(219, 121, 183));
+  animation: animate-gradient 25s ease infinite;
+}
+
+@keyframes animate-gradient {
+  0% {
+    background-position: left;
+  }
+
+  50% {
+    background-position: right;
+  }
+
+  100% {
+    background-position: left;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* controlled scrolling */
+
+body {
+  scroll-snap-type: y mandatory;
+  overflow-x: scroll;
+}
+
+section {
+  scroll-snap-align: start;
 }
