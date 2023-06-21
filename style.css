@@ -1021,15 +1021,3 @@ footer p.p--black {
     background-position: 50%;
   }
 }
-
-/* apply scroll */
-
-/* .testimonial-grid {
-  scroll-snap-type: y mandatory;
-  overflow-y: auto;
-  height: 100vh;
-}
-
-.testimonial {
-  scroll-snap-align: start;
-} */
